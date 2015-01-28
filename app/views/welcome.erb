@@ -1,0 +1,13 @@
+<div class="title"><h1>Welcome <%= session[:user_name] %></h1></div>
+<div class="container">
+<h2>Your urls:</h2>
+<% session[:urls].each do |url| %>
+  <p><a href="/goto/<%=url.short_url%>">localhost:9393/goto/<%=url.short_url%></a> redirects to  <br> <%=url.long_url%> <br> <%=url.clicks%> clicks</p>
+<% end %>
+<a href='/create'>create a new short url</a>
+<br></br>
+
+<form type="/welcome" method="post">
+  <input type="submit" value="Log Out">
+</form>
+</div>

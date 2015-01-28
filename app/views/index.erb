@@ -1,0 +1,28 @@
+<body>
+  <script>
+  function doLogin() {
+      alert("Invalid login. Please try again dude!");
+  }
+  </script>
+
+  <div class="title">
+    <h1>Welcome<br> to NotSoUseless Login<h1>
+  </div>
+  <div class="container">
+    <h2>Please login below:</h2>
+    <form type="/" method="post">
+    <p>Email: <input type="text" value="example@mail.com" name="email" size="23" align="right"></p>
+    <p>Password: <input type="password" name="password" align="right"></p>
+    <input type="submit" value="Login lah">
+    <button onclick="doLogin()">Login man!</button>
+    <br></br>
+    <p>Or <a href='/create'>create short urls</a> without logging in</p>
+    <br></br>
+
+    <p>Don't have an account yet? <a href="/register">Click Here</a>
+
+    <p><%=session[:error_msg]%></p>
+    </form>
+
+  </div>
+</body>
