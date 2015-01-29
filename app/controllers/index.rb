@@ -26,7 +26,7 @@ get '/welcome' do
   end
   session[:urls] = []
   Url.all.each do |url|
-    if url.user_id == session[:user].id
+    if url.user_id == session[:user_id]
       session[:urls] << url
     end
   end
